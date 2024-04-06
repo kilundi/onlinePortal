@@ -478,8 +478,8 @@ $page = 1;
 									<div class="col-sm-6 col-md-4">
 
 										<div class="footer-about-us">
-											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
+											<h5 class="footer-title">About Jobs Finder</h5>
+											<p>Jobs Finder is a job portal, online job management system developed by kilundi  for his project in march 2024.</p>
 
 										</div>
 
@@ -507,9 +507,9 @@ $page = 1;
 
 								<h5 class="footer-title">Job Finder Contact</h5>
 
-								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
-								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
+								<p>Address :P.O BOX 38 EMALI</p>
+								<p>Email : <a href="mailto:muthiani42@gmail.com">muthiani42@gmail.com</a></p>
+								<p>Phone : <a href="tel:+25421855756">+25421855756</a></p>
 
 
 							</div>
@@ -529,14 +529,14 @@ $page = 1;
 
 							<div class="col-sm-4 col-md-4">
 
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Nightingale Vision Software</p>
+								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Star techs</p>
 
 							</div>
 
 							<div class="col-sm-4 col-md-4">
 
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by kilundi </a></li>
 								</ul>
 
 							</div>

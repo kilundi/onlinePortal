@@ -237,7 +237,7 @@ include 'constants/check-login.php';
 							<ul class="address-list">
 								<li>
 										<h5>Address</h5>
-										<address> Takoradi, <br/> PO.BOX AX40, <br/>School Junction</address>
+										<address> Emali, <br/> PO.BOX 38,</address>
 								</li>
 								<li>
 										<h5>Email</h5><a href="mailto:muthiani42@gmail.com">muthiani42@gmail.com</a>

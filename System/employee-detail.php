@@ -675,14 +675,15 @@ header("location:./");
 
 							<div class="col-sm-4 col-md-4">
 
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Nightingale Vision Software</p>
+								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Star techs</p>
+
 
 							</div>
 
 							<div class="col-sm-4 col-md-4">
 
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by kilundi </a></li>
 								</ul>
 
 							</div>

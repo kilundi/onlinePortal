@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en">
-<?php 
-require '../constants/settings.php'; 
+<?php
+require '../constants/settings.php';
 require 'constants/check-login.php';
 
 if ($user_online == "true") {
 if ($myrole == "employee") {
 }else{
-header("location:../");		
+header("location:../");
 }
 }else{
-header("location:../");	
+header("location:../");
 }
 
 if (isset($_GET['page'])) {
@@ -21,10 +21,10 @@ $page1 = 0;
 $page = 1;
 }else{
 $page1 = ($page*10)-10;
-}					
+}
 }else{
 $page1 = 0;
-$page = 1;	
+$page = 1;
 }
 ?>
 <head>
@@ -33,7 +33,7 @@ $page = 1;
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Nightingale Jobs - Applied Jobs</title>
+	<title>Job Finder - Applied Jobs</title>
 	<meta name="description" content="Online Job Management / Job Portal" />
 	<meta name="keywords" content="job, work, resume, applicants, application, employee, employer, hire, hiring, human resource management, hr, online job management, company, worker, career, recruiting, recruitment" />
 	<meta name="author" content="BwireSoft">
@@ -46,14 +46,14 @@ $page = 1;
     <meta property="og:image:alt" content="Bwire Jobs" />
     <meta property="og:description" content="Online Job Management / Job Portal" />
 
-	<link rel="shortcut icon" href="../images/ico/favicon.png">
+	<link rel="shortcut icon" href="../images/ico/logo.svg">
 
 
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="screen">	
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" media="screen">
 	<link href="../css/animate.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 	<link href="../css/component.css" rel="stylesheet">
-	
+
 
 	<link rel="stylesheet" href="../icons/linearicons/style.css">
 	<link rel="stylesheet" href="../icons/font-awesome/css/font-awesome.min.css">
@@ -69,18 +69,18 @@ $page = 1;
 
 	<link href="../css/style.css" rel="stylesheet">
 
-	
+
 </head>
 
   <style>
-  
+
     .autofit2 {
 	height:80px;
 	width:100px;
-    object-fit:cover; 
+    object-fit:cover;
   }
-  
-  
+
+
   </style>
 <body class="not-transparent-header">
 
@@ -91,42 +91,42 @@ $page = 1;
 			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
 
 				<div class="container">
-					
+
 					<div class="logo-wrapper">
 						<div class="logo">
-							<a href="../"><img src="../images/logo.png" alt="Logo" /></a>
+							<a href="../"><img src="../images/logo2.png" alt="Logo" /></a>
 						</div>
 					</div>
-					
+
 					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
-					
+
 						<ul class="nav navbar-nav" id="responsive-menu">
-						
+
 							<li>
-							
+
 								<a href="../">Home</a>
-								
+
 							</li>
-							
+
 							<li>
 								<a href="../job-list.php">Job List</a>
 
 							</li>
-							
+
 							<li>
 								<a href="../employers.php">Employers</a>
 							</li>
-							
+
 							<li>
 								<a href="../employees.php">Employees</a>
 							</li>
-							
+
 							<li>
 								<a href="../contact.php">Contact Us</a>
 							</li>
 
 						</ul>
-				
+
 					</div>
 
 					<div class="nav-mini-wrapper">
@@ -135,69 +135,69 @@ $page = 1;
 							<li><a href="./">Profile</a></li>
 						</ul>
 					</div>
-				
+
 				</div>
-				
+
 				<div id="slicknav-mobile"></div>
-				
+
 			</nav>
 
-			
+
 		</header>
 
 		<div class="main-wrapper">
 
 			<div class="breadcrumb-wrapper">
-			
+
 				<div class="container">
-				
+
 					<ol class="breadcrumb-list booking-step">
 						<li><a href="../">Nightingale Jobs</a></li>
 						<li><span>Applied Jobs</span></li>
 					</ol>
-					
+
 				</div>
-				
+
 			</div>
-		
-			
+
+
 			<div class="admin-container-wrapper">
 
 				<div class="container">
-				
+
 					<div class="GridLex-gap-15-wrappper">
-					
+
 						<div class="GridLex-grid-noGutter-equalHeight">
-						
+
 							<div class="GridLex-col-3_sm-4_xs-12">
-							
+
 								<div class="admin-sidebar">
-										
+
 									<div class="admin-user-item">
-									<div class="image">	
-									
-										<?php 
+									<div class="image">
+
+										<?php
 										if ($myavatar == null) {
 										print '<center><img class="img-circle autofit2" src="../images/default.jpg" title="'.$myfname.'" alt="image"  /></center>';
 										}else{
-										echo '<center><img class="img-circle autofit2" alt="image" title="'.$myfname.'"  src="data:image/jpeg;base64,'.base64_encode($myavatar).'"/></center>';	
+										echo '<center><img class="img-circle autofit2" alt="image" title="'.$myfname.'"  src="data:image/jpeg;base64,'.base64_encode($myavatar).'"/></center>';
 										}
 										?>
 										</div>
 										<br>
-										
-										
+
+
 										<h4><?php echo "$myfname"; ?> <?php echo "$mylname"; ?></h4>
 										<p class="user-role"><?php echo "$mytitle"; ?></p>
-										
+
 									</div>
-									
+
 									<div class="admin-user-action text-center">
-									
+
 										<a target="_blank" href="my_cv" class="btn btn-primary btn-sm btn-inverse">View my CV</a>
-										
+
 									</div>
-									
+
 									<ul class="admin-user-menu clearfix">
 										<li>
 											<a href="./"><i class="fa fa-user"></i> Profile</a>
@@ -233,29 +233,29 @@ $page = 1;
 											<a href="../logout.php"><i class="fa fa-sign-out"></i> Logout</a>
 										</li>
 									</ul>
-									
+
 								</div>
 
 							</div>
-							
+
 							<div class="GridLex-col-9_sm-8_xs-12">
-							
+
 								<div class="admin-content-wrapper">
 
 									<div class="admin-section-title">
-									
+
 										<h2>Applied Jobs</h2>
-					
-										
+
+
 									</div>
-									
+
 									<div class="resume-list-wrapper">
-									
+
 									<?php require 'constants/check_reply.php'; ?>
 									<div class="recent-job-wrapper">
 								  <?php
                                   require '../constants/db_config.php';
-								  
+
 								  try {
                                   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                                   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -268,7 +268,7 @@ $page = 1;
                                     $post_month = date_format(date_create_from_format('m/d/Y', $row['application_date']), 'F');
                                     $post_year = date_format(date_create_from_format('m/d/Y', $row['application_date']), 'Y');
 								    $job_id = $row['job_id'];
-								
+
 								    $stmtb = $conn->prepare("SELECT * FROM tbl_jobs WHERE job_id = '$job_id'");
                                     $stmtb->execute();
                                     $resultb = $stmtb->fetchAll();
@@ -282,42 +282,42 @@ $page = 1;
 	                                $sta = '<div class="job-label label label-success">
 											Freelance
 											</div>';
-											  
+
 	                                }
 	                                if ($jobtype == "Part-time") {
 	                                 $sta = '<div class="job-label label label-danger">
 											Part-time
 											</div>';
-											  
+
 	                                }
 	                                if ($jobtype == "Full-time") {
 	                                $sta = '<div class="job-label label label-warning">
 											Full-time
 											</div>';
-											  
-	                                }	
-									
+
+	                                }
+
 									$stmtc = $conn->prepare("SELECT * FROM tbl_users WHERE member_no = '$compid' AND role = 'employer'");
                                     $stmtc->execute();
                                     $resultc = $stmtc->fetchAll();
-									
+
 									foreach ($resultc as $rowc) {
 									$compname = $rowc['first_name'];
-									$complogo = $rowc['avatar'];	
-										
+									$complogo = $rowc['avatar'];
+
 									}
-									
+
 									?>
 																	   <a target="_blank" href="../explore-job.php?jobid=<?php echo "$job_id"; ?>" class="recent-job-item clearfix">
 								<div class="GridLex-grid-middle">
 									<div class="GridLex-col-6_xs-12">
 										<div class="job-position">
 											<div class="image">
-											<?php 
+											<?php
 										    if ($complogo == null) {
 										    print '<center><img class="autofit3" alt="image"  src="images/blank.png"/></center>';
 										    }else{
-										    echo '<center><img class="autofit3" alt="image" title="'.$compname.'" width="180" height="100" src="data:image/jpeg;base64,'.base64_encode($complogo).'"/></center>';	
+										    echo '<center><img class="autofit3" alt="image" title="'.$compname.'" width="180" height="100" src="data:image/jpeg;base64,'.base64_encode($complogo).'"/></center>';
 										    }
 										     ?>
 											</div>
@@ -338,23 +338,23 @@ $page = 1;
 									</div>
 								</div>
 							</a>
-							
+
 							<?php
 									}
-								  
-								 
-		
- 
+
+
+
+
 	                              }
                                   }catch(PDOException $e)
                                   {
 
                                   } ?>
-	
+
 								  </div>
 
 									<div class="pager-wrapper">
-								
+
 						            <ul class="pager-list">
 								<?php
 								$total_records = 0;
@@ -370,74 +370,74 @@ $page = 1;
 	                              $total_records++;
 	                            }
 
-					  
+
 	                            }catch(PDOException $e)
                                 {
-                 
+
                                 }
-	
+
 								$records = $total_records/10;
                                 $records = ceil($records);
 				                if ($records > 1 ) {
 								$prevpage = $page - 1;
 								$nextpage = $page + 1;
-								
+
 								print '<li class="paging-nav" '; if ($page == "1") { print 'class="disabled"'; } print '><a '; if ($page == "1") { print ''; } else { print 'href="applied-jobs.php?page='.$prevpage.'"';} print '><i class="fa fa-chevron-left"></i></a></li>';
 					            for ($b=1;$b<=$records;$b++)
                                  {
-                                 
+
 		                        ?><li  class="paging-nav" ><a <?php if ($b == $page) { print ' style="background-color:#33B6CB; color:white" '; } ?> href="applied-jobs.php?page=<?php echo "$b"; ?>"><?php echo $b." "; ?></a></li><?php
-                                 }	
+                                 }
 								 print '<li class="paging-nav"'; if ($page == $records) { print 'class="disabled"'; } print '><a '; if ($page == $records) { print ''; } else { print 'href="applied-jobs.php?page='.$nextpage.'"';} print '><i class="fa fa-chevron-right"></i></a></li>';
 					             }
 
-								
+
 								?>
 
-						            </ul>	
-					
+						            </ul>
+
 					                </div>
 
-										
-		
-										
+
+
+
 									</div>
-									
-									
+
+
 								</div>
 
 							</div>
-							
+
 						</div>
 
 					</div>
 
 				</div>
-			
+
 			</div>
 
 			<footer class="footer-wrapper">
-			
+
 				<div class="main-footer">
-				
+
 					<div class="container">
-					
+
 						<div class="row">
-						
+
 							<div class="col-sm-12 col-md-9">
-							
+
 								<div class="row">
-								
+
 									<div class="col-sm-6 col-md-4">
-									
+
 										<div class="footer-about-us">
-											<h5 class="footer-title">About Nightingale Jobs</h5>
-											<p>Nightingale Jobs is a job portal, online job management system developed by Nathaniel Nkrumah for his project in february 2018.</p>
-										
+											<h5 class="footer-title">About Jobs Finder</h5>
+											<p>Jobs Finder is a job portal, online job management system developed by kilundi  for his project in march 2024.</p>
+
 										</div>
 
 									</div>
-									
+
 									<div class="col-sm-6 col-md-5 mt-30-xs">
 										<h5 class="footer-title">Quick Links</h5>
 										<ul class="footer-menu clearfix">
@@ -449,51 +449,51 @@ $page = 1;
 											<li><a href="#">Go to top</a></li>
 
 										</ul>
-									
+
 									</div>
 
 								</div>
 
 							</div>
-							
+
 							<div class="col-sm-12 col-md-3 mt-30-sm">
-							
-								<h5 class="footer-title">Nightingale Jobs Contact</h5>
-								
-								<p>Address : Takoradi, School Junction PO.BOX AX40</p>
-								<p>Email : <a href="mailto:nightingale.nath2@gmail.com">nightingale.nath2@gmail.com</a></p>
-								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
-								
+
+								<h5 class="footer-title">Job Finder Contact</h5>
+
+								<p>Address :P.O BOX 38 EMALI</p>
+								<p>Email : <a href="mailto:muthiani42@gmail.com">muthiani42@gmail.com</a></p>
+								<p>Phone : <a href="tel:+25421855756">+25421855756</a></p>
+
 
 							</div>
 
-							
+
 						</div>
-						
+
 					</div>
-					
+
 				</div>
-				
+
 				<div class="bottom-footer">
-				
+
 					<div class="container">
-					
+
 						<div class="row">
-						
+
 							<div class="col-sm-4 col-md-4">
-					
-								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Nightingale Vision Software</p>
-								
+
+								<p class="copy-right">&#169; Copyright <?php echo date('Y'); ?> Star techs</p>
+
 							</div>
-							
+
 							<div class="col-sm-4 col-md-4">
-							
+
 								<ul class="bottom-footer-menu">
-									<li><a >Developed by Nathaniel Nkrumah</a></li>
+									<li><a >Developed by kilundi </a></li>
 								</ul>
-							
+
 							</div>
-							
+
 							<div class="col-sm-4 col-md-4">
 								<ul class="bottom-footer-menu for-social">
 									<li><a href="<?php echo "$tw"; ?>"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
@@ -501,21 +501,21 @@ $page = 1;
 									<li><a href="<?php echo "$ig"; ?>"><i class="ri ri-instagram" data-toggle="tooltip" data-placement="top" title="instagram"></i></a></li>
 								</ul>
 							</div>
-						
+
 						</div>
 
 					</div>
-					
+
 				</div>
-			
+
 			</footer>
-			
+
 		</div>
 
 
 	</div>
- 
- 
+
+
 
 <div id="back-to-top">
    <a href="#"><i class="ion-ios-arrow-up"></i></a>
