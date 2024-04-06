@@ -30,9 +30,7 @@ $redirectUri = isset($_SERVER['HTTPS']) ? 'https://' : 'http://' . $_SERVER['HTT
 
 //These details obtained are by setting up app in Google developer console.
 $clientId = '';
-// 623981135249-dc93qa175udd7regrecus5o67c6ej0ic.apps.googleusercontent.com
 $clientSecret = '';
-// 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
 
 class Google extends AbstractProvider
 {
